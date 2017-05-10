@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Kota_Example' do
+  pod 'Kota', :path => '../'
+
+  target 'Kota_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
