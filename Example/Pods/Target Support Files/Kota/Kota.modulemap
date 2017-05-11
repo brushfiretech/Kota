@@ -1,0 +1,6 @@
+framework module Kota {
+  umbrella header "Kota-umbrella.h"
+
+  export *
+  module * { export * }
+}

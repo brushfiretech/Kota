@@ -1,0 +1,1241 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0054224BA8A23E8413AE5452B7C7D9C4 /* HeroIndependentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899787A951B8E6C800C5022F4561CB66 /* HeroIndependentController.swift */; };
+		00CF7D513DF064760BF24C6A88E3E855 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316BA9B5D43275E1849D7B35D8C5131C /* Lexer.swift */; };
+		05F0808ED771EDC8628F839F16CB7EC8 /* HeroDefaultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE442608646BBAD20C14FE415993FF7 /* HeroDefaultAnimator.swift */; };
+		0DA21E732596100C88761DA40C290796 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B224695EE7EA7C745CF9A5BF46D44E /* Nodes.swift */; };
+		111AF6E4F246E64FB7F3B0A6C64EAD56 /* Kota.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 57441569C1C20715C8EF19BF04044D3C /* Kota.bundle */; };
+		1D030FD35221838E1BC264DBD51B3A93 /* HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08A3A8A0105CCFF5C3090802EC527F /* HeroStringConvertible.swift */; };
+		1EFCE8E2E39D6FF98A82A412DCDA22F4 /* CAMediaTimingFunction+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7C0C466A9B1973B3027FBDBE2647F /* CAMediaTimingFunction+Hero.swift */; };
+		24A2FF429694FC9ADDD45CCB98DD2456 /* Kota-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B058C8FCEFA9974F40D30AA5C11AF /* Kota-dummy.m */; };
+		2806F1EF9DEB1DA9092C35D34AE12743 /* Pods-Kota_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BA069B2F82957DE29CB7A43A1F3B8C /* Pods-Kota_Tests-dummy.m */; };
+		2808DEA4E83D337D6A0F0D3EE9AFC8CB /* UIView+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A38E905D77115E102E6466AA26DBF7F /* UIView+Hero.swift */; };
+		29E1C79CB521E7299EFF904E327451A8 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CBB91F82E7A71424CD91849C6815B /* IgnoreSubviewModifiersPreprocessor.swift */; };
+		2F44F37D2F6170E3B3186555CF82F575 /* HeroDebugPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9279B4BCAD759BD41E8C41BD75A8A097 /* HeroDebugPlugin.swift */; };
+		30AAA48062682BFE01999EB48AB3E1A8 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34992311002F066B5B92F18523960A31 /* Hero.framework */; };
+		30E0982814D1F0971FA52AAE141325B8 /* HeroBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B494C76A682AFB467F426450F24FFD /* HeroBaseController.swift */; };
+		355839E3459355665718D6358BA078A6 /* HeroViewPropertyViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B239CF4AEF3C6D60D853EA8519A0F92 /* HeroViewPropertyViewContext.swift */; };
+		398917958AEE73A2ABA9DE141F4468CE /* DefaultAnimationPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31151D5583884784C3FD2143509333E0 /* DefaultAnimationPreprocessor.swift */; };
+		48235D5323F59B009A269DA487510017 /* SlackHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709738AE30F99B839E29D2ABA69E2FBE /* SlackHelper.swift */; };
+		4871AB82D1BA4619362CECE2C157E239 /* Array+HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390B377601D8EF6300C9442722DCA99 /* Array+HeroModifier.swift */; };
+		53E959FF033CA669329F84833762A739 /* Pods-Kota_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E32FF6817F80975ADE9FB26316FC91 /* Pods-Kota_Example-dummy.m */; };
+		56A21DE22C2459C7C158A034DF3C46ED /* Kota-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4017DAB1E3F2640DF9278103277DE76D /* Kota-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6095DBFEB1AF8CE765FA645A05459C2B /* CascadePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A803C01142A60B9FAC4CEA7FD815638 /* CascadePreprocessor.swift */; };
+		64B4D37F446B67C4A0D546ABF01ECDC6 /* DurationPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C317C845E7FF17C915256FA91D100F6 /* DurationPreprocessor.swift */; };
+		67BCB163E387C2E9288BC15CA3E4ACAF /* UIKit+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C106EF0D4F855AA72822EDCDC977311 /* UIKit+Hero.swift */; };
+		69C8F9CB4C695672395946F7C8A23E24 /* HeroPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB1E9315F1625CD0BE643BDBAFF69F6 /* HeroPlugin.swift */; };
+		6B372F84B5B4DD0EE5A635A1F15C1817 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD74401E14D74F371B7CD4805919BBB /* Foundation.framework */; };
+		6B76015FB5A7E8450026BC11402C93E9 /* UIViewController+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F1D49FA76089D6C982DCA27B7B68B7 /* UIViewController+Hero.swift */; };
+		6D770E36544FC7EDCBA006F3AA1BEDF1 /* DoneButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB411B930573FB27FEEE98CF20ED217 /* DoneButton@2x.png */; };
+		6F977B467C1C4EBDE66733417643F1DD /* Hero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 210F738DE617ED8984511D8ECE963ACE /* Hero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		731BDB378A5E0759C89BACA382B6412B /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1D14C209B66AB8F3B83A21DF605505 /* Regex.swift */; };
+		7C1C1B760586BF68D2A32BD4C30ECB33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD74401E14D74F371B7CD4805919BBB /* Foundation.framework */; };
+		7CFA1943FDB4C2089DE68A30E8097A30 /* ScreenShot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB985EB78C555CB66682E1CF88096DCE /* ScreenShot.storyboard */; };
+		7DDE6E306CAB5E388629F6C6A561ECBA /* MatchPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9D3A8A1793A3BB9ABD5A8C22CBA6E5 /* MatchPreprocessor.swift */; };
+		84B25B1A071858745816A95418F9F77A /* HeroAnimatorViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3462C008176CB7FB009DC0D97AC69C /* HeroAnimatorViewContext.swift */; };
+		9AFFB3CD35804AD63D4061A072DCF726 /* DoneButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A0DA7C2D6DDAD132D720014A439854 /* DoneButton@3x.png */; };
+		A271792E9BD1BF7C0F7FC526D33C68C3 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDE188B89ED1EC18BB6E44739873448 /* Parser.swift */; };
+		A57C83E4371C1D6439BC82CDBEE32E08 /* DispatchQueue+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A3CBAB8437EDDC88E101B641070A5F /* DispatchQueue+Hero.swift */; };
+		A678C2C71641734C94E722304E378D56 /* GreenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CCF914B64B20C85D6AC1923163B7BB40 /* GreenButton.png */; };
+		A72A258B0E285A00B063B0AF42E488A5 /* HeroTargetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD0B972125F2DBD9274EB0A6C729F28 /* HeroTargetState.swift */; };
+		A98834CC894591D34B13F3D9788C0F24 /* SendScreenShotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC40EC50520B13764B051A929D574C9 /* SendScreenShotViewController.swift */; };
+		ABE0F6116DF5C33A310E215DE9AEE769 /* HeroContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3A36E421777D4EDE8281B2BA3717A1 /* HeroContext.swift */; };
+		AC78190959872C81167ACC8F0B02BED9 /* Hero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A274DE4462D0D50965144A86D6EB1984 /* Hero-dummy.m */; };
+		AF04AD552E6BE94703E8EC8BEAEEA076 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD74401E14D74F371B7CD4805919BBB /* Foundation.framework */; };
+		B62A16E73ADAFD9229C560E7C46ADB8E /* HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDC21FC643DF69C19B3A14F8FB8DEC /* HeroModifier.swift */; };
+		BADD91D0FAFF2091B3C94270DB4568D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD74401E14D74F371B7CD4805919BBB /* Foundation.framework */; };
+		BB7E6CA50EF56EF89CECA4DE5FEF66B9 /* HeroCoreAnimationViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7344F8AC761ADA3E3555A1FB29F4A4AF /* HeroCoreAnimationViewContext.swift */; };
+		BEB47A3CAB4F7D3C8EDA608599417596 /* HeroDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA5F0273A7CE7273E38605D1BF07A4F /* HeroDebugView.swift */; };
+		C1D7C318F2418A5FE5F341B4806DE422 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5930B03D59274407A0672E636327ED52 /* UIKit.framework */; };
+		C56DC9BC2F36127BCF1C026DDDC65158 /* DoneButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E3F3433691C9196A724990F56614E /* DoneButton.png */; };
+		CCACA9026494E6D39D374A4BD303F69C /* CALayer+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC4C52F7A8FFD4623DE4E3D56DB93F3 /* CALayer+Hero.swift */; };
+		CE4501723EC8667ADB9698705CC0AA04 /* HeroTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297AEA2BDFD6F0F4460C0BEC11DCD9C1 /* HeroTypes.swift */; };
+		D48039A4AAAD63B84E8041F816AAE5CC /* BasePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99FAD05F1E1109654014F51EBFEB2CA /* BasePreprocessor.swift */; };
+		D99E43134038AA4E88CAD6FDFC7FA944 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2695EF7FFEF3AAA8479BD53F0E4725D5 /* CloseButton.png */; };
+		DE4FD12FD11924E71640A08AF3AFA2E4 /* SourcePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493433833B9F002721FA69E497F001B6 /* SourcePreprocessor.swift */; };
+		DE7E529EF406ECBC3185D907151CDE78 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48967C3B43DB9AAA051D41868916F661 /* Hero.swift */; };
+		E57BB5C5A234EE3344BB5AAECFC7CC7A /* HeroModifier+HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64276CEA0D5F7D44ED638A5B262292 /* HeroModifier+HeroStringConvertible.swift */; };
+		E91E80F3AA36C095A59C59A446271BF0 /* CG+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E710F27D3EA626F79734BFAFC8373C7 /* CG+Hero.swift */; };
+		EBDE15F1F53C87BDD89BA9CEBA3F857A /* ScreenShotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38E6569182202735680837339F386F /* ScreenShotViewController.swift */; };
+		F0C3992217F51CE5F8661B1FE5409799 /* Pods-Kota_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B88915CE2B42D0146CA5F4E12781798 /* Pods-Kota_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F86DA4EBC6F290BDB1C8F83A0424930C /* Kota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F2C0C9963F3C83B5B42CA380A0FD2 /* Kota.swift */; };
+		FFB7F92BB19963AFB316CDD45FC6F25C /* Pods-Kota_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73702E3D744AEF8CD26FFBB6F1B699F5 /* Pods-Kota_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0064CE5E9FD5E4C76A9C791C886CF614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59D77155613EBB5D37093257BABED97B;
+			remoteInfo = Kota;
+		};
+		3DDF4DA043E3C32633098FE516209DEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E156B0206EAEE63F1E7135F9C5187B3E;
+			remoteInfo = "Kota-Kota";
+		};
+		6D61D89F8DC826CB45F0A41832C10B95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A3E211676B243619B026D147D272253;
+			remoteInfo = Hero;
+		};
+		A3AF0877BAF7B814A58698DF3F2095C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A3E211676B243619B026D147D272253;
+			remoteInfo = Hero;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		040F2C0C9963F3C83B5B42CA380A0FD2 /* Kota.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Kota.swift; sourceTree = "<group>"; };
+		045D1C6FFBBCBDB35BAF141BEBEDE45A /* Pods-Kota_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kota_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		07BA069B2F82957DE29CB7A43A1F3B8C /* Pods-Kota_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kota_Tests-dummy.m"; sourceTree = "<group>"; };
+		0A0E3F3433691C9196A724990F56614E /* DoneButton.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = DoneButton.png; sourceTree = "<group>"; };
+		0F64276CEA0D5F7D44ED638A5B262292 /* HeroModifier+HeroStringConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroModifier+HeroStringConvertible.swift"; path = "Sources/HeroModifier+HeroStringConvertible.swift"; sourceTree = "<group>"; };
+		14AC493F64ABD5683E42F809341F7068 /* Kota.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kota.framework; path = Kota.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A803C01142A60B9FAC4CEA7FD815638 /* CascadePreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CascadePreprocessor.swift; path = Sources/Preprocessors/CascadePreprocessor.swift; sourceTree = "<group>"; };
+		1B88915CE2B42D0146CA5F4E12781798 /* Pods-Kota_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kota_Example-umbrella.h"; sourceTree = "<group>"; };
+		1CD74401E14D74F371B7CD4805919BBB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2044DB9A273E130314370E8BC55C2326 /* Pods-Kota_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kota_Example-resources.sh"; sourceTree = "<group>"; };
+		210F738DE617ED8984511D8ECE963ACE /* Hero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hero-umbrella.h"; sourceTree = "<group>"; };
+		2695EF7FFEF3AAA8479BD53F0E4725D5 /* CloseButton.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
+		297AEA2BDFD6F0F4460C0BEC11DCD9C1 /* HeroTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroTypes.swift; path = Sources/HeroTypes.swift; sourceTree = "<group>"; };
+		2A08A3A8A0105CCFF5C3090802EC527F /* HeroStringConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroStringConvertible.swift; path = Sources/HeroStringConvertible.swift; sourceTree = "<group>"; };
+		2A0B82A980B7A8AD6A956B5CE21F8F5F /* Pods-Kota_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kota_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2C106EF0D4F855AA72822EDCDC977311 /* UIKit+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+Hero.swift"; path = "Sources/Extensions/UIKit+Hero.swift"; sourceTree = "<group>"; };
+		2CC4C52F7A8FFD4623DE4E3D56DB93F3 /* CALayer+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+Hero.swift"; path = "Sources/Extensions/CALayer+Hero.swift"; sourceTree = "<group>"; };
+		2CDDC21FC643DF69C19B3A14F8FB8DEC /* HeroModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroModifier.swift; path = Sources/HeroModifier.swift; sourceTree = "<group>"; };
+		2F3462C008176CB7FB009DC0D97AC69C /* HeroAnimatorViewContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroAnimatorViewContext.swift; path = Sources/Animator/HeroAnimatorViewContext.swift; sourceTree = "<group>"; };
+		2FB411B930573FB27FEEE98CF20ED217 /* DoneButton@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "DoneButton@2x.png"; sourceTree = "<group>"; };
+		30A0DA7C2D6DDAD132D720014A439854 /* DoneButton@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "DoneButton@3x.png"; sourceTree = "<group>"; };
+		31151D5583884784C3FD2143509333E0 /* DefaultAnimationPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultAnimationPreprocessor.swift; path = Sources/DefaultAnimationPreprocessor.swift; sourceTree = "<group>"; };
+		316BA9B5D43275E1849D7B35D8C5131C /* Lexer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Lexer.swift; path = Sources/Parser/Lexer.swift; sourceTree = "<group>"; };
+		322EAE16BAE7031F882C621ADE0A93C6 /* Kota-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kota-prefix.pch"; sourceTree = "<group>"; };
+		34992311002F066B5B92F18523960A31 /* Hero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4017DAB1E3F2640DF9278103277DE76D /* Kota-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kota-umbrella.h"; sourceTree = "<group>"; };
+		48967C3B43DB9AAA051D41868916F661 /* Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hero.swift; path = Sources/Hero.swift; sourceTree = "<group>"; };
+		493433833B9F002721FA69E497F001B6 /* SourcePreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourcePreprocessor.swift; path = Sources/Preprocessors/SourcePreprocessor.swift; sourceTree = "<group>"; };
+		49D1DA5791C332E4BB284E45BFF9A2EB /* Pods-Kota_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kota_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4C716A1B5F1B955B2640CC6BD7769082 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50B494C76A682AFB467F426450F24FFD /* HeroBaseController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroBaseController.swift; path = Sources/HeroBaseController.swift; sourceTree = "<group>"; };
+		56A7C0C466A9B1973B3027FBDBE2647F /* CAMediaTimingFunction+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CAMediaTimingFunction+Hero.swift"; path = "Sources/Extensions/CAMediaTimingFunction+Hero.swift"; sourceTree = "<group>"; };
+		57441569C1C20715C8EF19BF04044D3C /* Kota.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Kota.bundle; path = Kota.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		5930B03D59274407A0672E636327ED52 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		5A38E905D77115E102E6466AA26DBF7F /* UIView+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Hero.swift"; path = "Sources/Extensions/UIView+Hero.swift"; sourceTree = "<group>"; };
+		5C0583855444FA7A32602A93E8BF46DC /* Pods-Kota_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Kota_Example.modulemap"; sourceTree = "<group>"; };
+		5C7873A68F8789B9437922964486371D /* ResourceBundle-Kota-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Kota-Info.plist"; sourceTree = "<group>"; };
+		5E710F27D3EA626F79734BFAFC8373C7 /* CG+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CG+Hero.swift"; path = "Sources/Extensions/CG+Hero.swift"; sourceTree = "<group>"; };
+		5F53B54BEC8A2810FEEC7D5159791A79 /* Pods-Kota_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kota_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		617FDB476C9B59FF687DB852A3221292 /* Hero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Hero.framework; path = Hero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5919D8F22C95A53FF21EA174553DD7 /* Pods-Kota_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kota_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		6B3A36E421777D4EDE8281B2BA3717A1 /* HeroContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroContext.swift; path = Sources/HeroContext.swift; sourceTree = "<group>"; };
+		6C317C845E7FF17C915256FA91D100F6 /* DurationPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DurationPreprocessor.swift; path = Sources/Preprocessors/DurationPreprocessor.swift; sourceTree = "<group>"; };
+		709738AE30F99B839E29D2ABA69E2FBE /* SlackHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SlackHelper.swift; sourceTree = "<group>"; };
+		7344F8AC761ADA3E3555A1FB29F4A4AF /* HeroCoreAnimationViewContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroCoreAnimationViewContext.swift; path = Sources/Animator/HeroCoreAnimationViewContext.swift; sourceTree = "<group>"; };
+		73702E3D744AEF8CD26FFBB6F1B699F5 /* Pods-Kota_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kota_Tests-umbrella.h"; sourceTree = "<group>"; };
+		78827E488FA70F21B153B5C1400AA10C /* Hero-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hero-prefix.pch"; sourceTree = "<group>"; };
+		7B239CF4AEF3C6D60D853EA8519A0F92 /* HeroViewPropertyViewContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroViewPropertyViewContext.swift; path = Sources/Animator/HeroViewPropertyViewContext.swift; sourceTree = "<group>"; };
+		899787A951B8E6C800C5022F4561CB66 /* HeroIndependentController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroIndependentController.swift; path = Sources/HeroIndependentController.swift; sourceTree = "<group>"; };
+		8E38E6569182202735680837339F386F /* ScreenShotViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScreenShotViewController.swift; sourceTree = "<group>"; };
+		8FF56A12F12C7748AA19498EF8D33F91 /* Pods-Kota_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kota_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		90B224695EE7EA7C745CF9A5BF46D44E /* Nodes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Nodes.swift; path = Sources/Parser/Nodes.swift; sourceTree = "<group>"; };
+		910567821F508665E76168F8AC63B6AF /* Pods-Kota_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Kota_Tests.modulemap"; sourceTree = "<group>"; };
+		9279B4BCAD759BD41E8C41BD75A8A097 /* HeroDebugPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroDebugPlugin.swift; path = "Sources/Debug Plugin/HeroDebugPlugin.swift"; sourceTree = "<group>"; };
+		92A9FF8A54D7B8D419B45DB158749D93 /* Hero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Hero.xcconfig; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94116FFF127DD4DC0005628644EA184C /* Pods_Kota_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kota_Example.framework; path = "Pods-Kota_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A274DE4462D0D50965144A86D6EB1984 /* Hero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Hero-dummy.m"; sourceTree = "<group>"; };
+		AF1D14C209B66AB8F3B83A21DF605505 /* Regex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Regex.swift; path = Sources/Parser/Regex.swift; sourceTree = "<group>"; };
+		B12A5E83D920365AADD8ADA206E6E46C /* Kota.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kota.xcconfig; sourceTree = "<group>"; };
+		B4A3CBAB8437EDDC88E101B641070A5F /* DispatchQueue+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Hero.swift"; path = "Sources/Extensions/DispatchQueue+Hero.swift"; sourceTree = "<group>"; };
+		B83B058C8FCEFA9974F40D30AA5C11AF /* Kota-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kota-dummy.m"; sourceTree = "<group>"; };
+		B96460352A70DA1DDFF9DF62FAE1CCDB /* Hero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Hero.modulemap; sourceTree = "<group>"; };
+		BBB1E9315F1625CD0BE643BDBAFF69F6 /* HeroPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroPlugin.swift; path = Sources/HeroPlugin.swift; sourceTree = "<group>"; };
+		BCC40EC50520B13764B051A929D574C9 /* SendScreenShotViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SendScreenShotViewController.swift; sourceTree = "<group>"; };
+		BDDE188B89ED1EC18BB6E44739873448 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/Parser/Parser.swift; sourceTree = "<group>"; };
+		BF9A773E2DED3F0A90687C9DC628F7A0 /* Kota.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Kota.modulemap; sourceTree = "<group>"; };
+		BFA77F82F71721CC215E2D03D45602A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C390B377601D8EF6300C9442722DCA99 /* Array+HeroModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+HeroModifier.swift"; path = "Sources/Extensions/Array+HeroModifier.swift"; sourceTree = "<group>"; };
+		C5363ED33E930852EE043B5C3A14CA41 /* Pods-Kota_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kota_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C875F1437D9004E7D7A4E64D1B2F24C3 /* Pods-Kota_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kota_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB985EB78C555CB66682E1CF88096DCE /* ScreenShot.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = ScreenShot.storyboard; sourceTree = "<group>"; };
+		CCF914B64B20C85D6AC1923163B7BB40 /* GreenButton.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = GreenButton.png; sourceTree = "<group>"; };
+		CF671DB0FEDB61FED51B375A97189BDF /* Pods_Kota_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kota_Tests.framework; path = "Pods-Kota_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF9CBB91F82E7A71424CD91849C6815B /* IgnoreSubviewModifiersPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IgnoreSubviewModifiersPreprocessor.swift; path = Sources/Preprocessors/IgnoreSubviewModifiersPreprocessor.swift; sourceTree = "<group>"; };
+		D99FAD05F1E1109654014F51EBFEB2CA /* BasePreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BasePreprocessor.swift; path = Sources/Preprocessors/BasePreprocessor.swift; sourceTree = "<group>"; };
+		D9F1D49FA76089D6C982DCA27B7B68B7 /* UIViewController+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Hero.swift"; path = "Sources/Extensions/UIViewController+Hero.swift"; sourceTree = "<group>"; };
+		DCA5F0273A7CE7273E38605D1BF07A4F /* HeroDebugView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroDebugView.swift; path = "Sources/Debug Plugin/HeroDebugView.swift"; sourceTree = "<group>"; };
+		DE30BF3F7BBA067D6CB4876EDD69F0B5 /* Pods-Kota_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kota_Example-frameworks.sh"; sourceTree = "<group>"; };
+		E87AD20A9E356495614D1B977B548288 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECC8B66293F51875567D2A88579C3033 /* Pods-Kota_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kota_Tests-resources.sh"; sourceTree = "<group>"; };
+		EE208DD83C2937F123C2ECD95BFFD9CB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0AB35A8D43BBCFBD3EBBD34574A7524 /* Pods-Kota_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kota_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F1E32FF6817F80975ADE9FB26316FC91 /* Pods-Kota_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kota_Example-dummy.m"; sourceTree = "<group>"; };
+		FBD0B972125F2DBD9274EB0A6C729F28 /* HeroTargetState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroTargetState.swift; path = Sources/HeroTargetState.swift; sourceTree = "<group>"; };
+		FC9D3A8A1793A3BB9ABD5A8C22CBA6E5 /* MatchPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchPreprocessor.swift; path = Sources/Preprocessors/MatchPreprocessor.swift; sourceTree = "<group>"; };
+		FEE442608646BBAD20C14FE415993FF7 /* HeroDefaultAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroDefaultAnimator.swift; path = Sources/Animator/HeroDefaultAnimator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21E6C68BEB179EF063E58DBBD27207D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF04AD552E6BE94703E8EC8BEAEEA076 /* Foundation.framework in Frameworks */,
+				C1D7C318F2418A5FE5F341B4806DE422 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64038910A17EE79E7767EFFC92162931 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B372F84B5B4DD0EE5A635A1F15C1817 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8523B11A765768C90C1B2C3A66EF4228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C1C1B760586BF68D2A32BD4C30ECB33 /* Foundation.framework in Frameworks */,
+				30AAA48062682BFE01999EB48AB3E1A8 /* Hero.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9979D4FAF58228BEC79B0BD6F42BCEE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F89941A58A06E30BCB238688DF137B7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADD91D0FAFF2091B3C94270DB4568D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D8131BAAA0C79F5A065753C3A221D74 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1CD74401E14D74F371B7CD4805919BBB /* Foundation.framework */,
+				5930B03D59274407A0672E636327ED52 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		17CF43399E0BFB19F84405C8624CC942 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9F635241AD64BE6ED6F6DFCA4BE137C /* Kota */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		195408397711E2FED8EA1CD2AD8DCCDE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFA77F82F71721CC215E2D03D45602A9 /* Info.plist */,
+				BF9A773E2DED3F0A90687C9DC628F7A0 /* Kota.modulemap */,
+				B12A5E83D920365AADD8ADA206E6E46C /* Kota.xcconfig */,
+				B83B058C8FCEFA9974F40D30AA5C11AF /* Kota-dummy.m */,
+				322EAE16BAE7031F882C621ADE0A93C6 /* Kota-prefix.pch */,
+				4017DAB1E3F2640DF9278103277DE76D /* Kota-umbrella.h */,
+				5C7873A68F8789B9437922964486371D /* ResourceBundle-Kota-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Kota";
+			sourceTree = "<group>";
+		};
+		5DCAECE3F8B3F2A77FACD493311D1DFB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				927B12074A0F719772C772C8F09E5B96 /* Hero */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		61B8E59A794EEDF74A8B52C0E5EB4C26 /* Kota */ = {
+			isa = PBXGroup;
+			children = (
+				828F73FC1BE91A19362563841613CA21 /* Classes */,
+			);
+			name = Kota;
+			path = Kota;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				17CF43399E0BFB19F84405C8624CC942 /* Development Pods */,
+				D219032857B5C47B43B582AB914E4623 /* Frameworks */,
+				5DCAECE3F8B3F2A77FACD493311D1DFB /* Pods */,
+				B1737763B6CEE7AFC27DC51059F8B25E /* Products */,
+				C1C10708F52C1CEDA0920423BEE83E6A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		828F73FC1BE91A19362563841613CA21 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				040F2C0C9963F3C83B5B42CA380A0FD2 /* Kota.swift */,
+				8E38E6569182202735680837339F386F /* ScreenShotViewController.swift */,
+				BCC40EC50520B13764B051A929D574C9 /* SendScreenShotViewController.swift */,
+				709738AE30F99B839E29D2ABA69E2FBE /* SlackHelper.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		90B28BB757EC5D8F5A6027D48B3AA502 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC56D6DC365660E5F9FF09B80E953062 /* Kota */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		927B12074A0F719772C772C8F09E5B96 /* Hero */ = {
+			isa = PBXGroup;
+			children = (
+				C390B377601D8EF6300C9442722DCA99 /* Array+HeroModifier.swift */,
+				D99FAD05F1E1109654014F51EBFEB2CA /* BasePreprocessor.swift */,
+				2CC4C52F7A8FFD4623DE4E3D56DB93F3 /* CALayer+Hero.swift */,
+				56A7C0C466A9B1973B3027FBDBE2647F /* CAMediaTimingFunction+Hero.swift */,
+				1A803C01142A60B9FAC4CEA7FD815638 /* CascadePreprocessor.swift */,
+				5E710F27D3EA626F79734BFAFC8373C7 /* CG+Hero.swift */,
+				31151D5583884784C3FD2143509333E0 /* DefaultAnimationPreprocessor.swift */,
+				B4A3CBAB8437EDDC88E101B641070A5F /* DispatchQueue+Hero.swift */,
+				6C317C845E7FF17C915256FA91D100F6 /* DurationPreprocessor.swift */,
+				48967C3B43DB9AAA051D41868916F661 /* Hero.swift */,
+				2F3462C008176CB7FB009DC0D97AC69C /* HeroAnimatorViewContext.swift */,
+				50B494C76A682AFB467F426450F24FFD /* HeroBaseController.swift */,
+				6B3A36E421777D4EDE8281B2BA3717A1 /* HeroContext.swift */,
+				7344F8AC761ADA3E3555A1FB29F4A4AF /* HeroCoreAnimationViewContext.swift */,
+				9279B4BCAD759BD41E8C41BD75A8A097 /* HeroDebugPlugin.swift */,
+				DCA5F0273A7CE7273E38605D1BF07A4F /* HeroDebugView.swift */,
+				FEE442608646BBAD20C14FE415993FF7 /* HeroDefaultAnimator.swift */,
+				899787A951B8E6C800C5022F4561CB66 /* HeroIndependentController.swift */,
+				2CDDC21FC643DF69C19B3A14F8FB8DEC /* HeroModifier.swift */,
+				0F64276CEA0D5F7D44ED638A5B262292 /* HeroModifier+HeroStringConvertible.swift */,
+				BBB1E9315F1625CD0BE643BDBAFF69F6 /* HeroPlugin.swift */,
+				2A08A3A8A0105CCFF5C3090802EC527F /* HeroStringConvertible.swift */,
+				FBD0B972125F2DBD9274EB0A6C729F28 /* HeroTargetState.swift */,
+				297AEA2BDFD6F0F4460C0BEC11DCD9C1 /* HeroTypes.swift */,
+				7B239CF4AEF3C6D60D853EA8519A0F92 /* HeroViewPropertyViewContext.swift */,
+				CF9CBB91F82E7A71424CD91849C6815B /* IgnoreSubviewModifiersPreprocessor.swift */,
+				316BA9B5D43275E1849D7B35D8C5131C /* Lexer.swift */,
+				FC9D3A8A1793A3BB9ABD5A8C22CBA6E5 /* MatchPreprocessor.swift */,
+				90B224695EE7EA7C745CF9A5BF46D44E /* Nodes.swift */,
+				BDDE188B89ED1EC18BB6E44739873448 /* Parser.swift */,
+				AF1D14C209B66AB8F3B83A21DF605505 /* Regex.swift */,
+				493433833B9F002721FA69E497F001B6 /* SourcePreprocessor.swift */,
+				2C106EF0D4F855AA72822EDCDC977311 /* UIKit+Hero.swift */,
+				5A38E905D77115E102E6466AA26DBF7F /* UIView+Hero.swift */,
+				D9F1D49FA76089D6C982DCA27B7B68B7 /* UIViewController+Hero.swift */,
+				E2E005C2AB5A3E024E42C04CAAC88771 /* Support Files */,
+			);
+			name = Hero;
+			path = Hero;
+			sourceTree = "<group>";
+		};
+		AC56D6DC365660E5F9FF09B80E953062 /* Kota */ = {
+			isa = PBXGroup;
+			children = (
+				C7CADCABAB6E5E2DA1CBEAE866796688 /* Assets */,
+			);
+			name = Kota;
+			path = Kota;
+			sourceTree = "<group>";
+		};
+		AC892742A4B440C5A80DC5CA8D9345C1 /* Pods-Kota_Example */ = {
+			isa = PBXGroup;
+			children = (
+				E87AD20A9E356495614D1B977B548288 /* Info.plist */,
+				5C0583855444FA7A32602A93E8BF46DC /* Pods-Kota_Example.modulemap */,
+				F0AB35A8D43BBCFBD3EBBD34574A7524 /* Pods-Kota_Example-acknowledgements.markdown */,
+				045D1C6FFBBCBDB35BAF141BEBEDE45A /* Pods-Kota_Example-acknowledgements.plist */,
+				F1E32FF6817F80975ADE9FB26316FC91 /* Pods-Kota_Example-dummy.m */,
+				DE30BF3F7BBA067D6CB4876EDD69F0B5 /* Pods-Kota_Example-frameworks.sh */,
+				2044DB9A273E130314370E8BC55C2326 /* Pods-Kota_Example-resources.sh */,
+				1B88915CE2B42D0146CA5F4E12781798 /* Pods-Kota_Example-umbrella.h */,
+				49D1DA5791C332E4BB284E45BFF9A2EB /* Pods-Kota_Example.debug.xcconfig */,
+				C5363ED33E930852EE043B5C3A14CA41 /* Pods-Kota_Example.release.xcconfig */,
+			);
+			name = "Pods-Kota_Example";
+			path = "Target Support Files/Pods-Kota_Example";
+			sourceTree = "<group>";
+		};
+		B1737763B6CEE7AFC27DC51059F8B25E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				617FDB476C9B59FF687DB852A3221292 /* Hero.framework */,
+				57441569C1C20715C8EF19BF04044D3C /* Kota.bundle */,
+				14AC493F64ABD5683E42F809341F7068 /* Kota.framework */,
+				94116FFF127DD4DC0005628644EA184C /* Pods_Kota_Example.framework */,
+				CF671DB0FEDB61FED51B375A97189BDF /* Pods_Kota_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1C10708F52C1CEDA0920423BEE83E6A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC892742A4B440C5A80DC5CA8D9345C1 /* Pods-Kota_Example */,
+				CE9C73F175E4D2550E0D2E8923554ADC /* Pods-Kota_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C7CADCABAB6E5E2DA1CBEAE866796688 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2695EF7FFEF3AAA8479BD53F0E4725D5 /* CloseButton.png */,
+				0A0E3F3433691C9196A724990F56614E /* DoneButton.png */,
+				2FB411B930573FB27FEEE98CF20ED217 /* DoneButton@2x.png */,
+				30A0DA7C2D6DDAD132D720014A439854 /* DoneButton@3x.png */,
+				CCF914B64B20C85D6AC1923163B7BB40 /* GreenButton.png */,
+				CB985EB78C555CB66682E1CF88096DCE /* ScreenShot.storyboard */,
+			);
+			name = Assets;
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		C9F635241AD64BE6ED6F6DFCA4BE137C /* Kota */ = {
+			isa = PBXGroup;
+			children = (
+				61B8E59A794EEDF74A8B52C0E5EB4C26 /* Kota */,
+				90B28BB757EC5D8F5A6027D48B3AA502 /* Resources */,
+				195408397711E2FED8EA1CD2AD8DCCDE /* Support Files */,
+			);
+			name = Kota;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CE9C73F175E4D2550E0D2E8923554ADC /* Pods-Kota_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EE208DD83C2937F123C2ECD95BFFD9CB /* Info.plist */,
+				910567821F508665E76168F8AC63B6AF /* Pods-Kota_Tests.modulemap */,
+				8FF56A12F12C7748AA19498EF8D33F91 /* Pods-Kota_Tests-acknowledgements.markdown */,
+				2A0B82A980B7A8AD6A956B5CE21F8F5F /* Pods-Kota_Tests-acknowledgements.plist */,
+				07BA069B2F82957DE29CB7A43A1F3B8C /* Pods-Kota_Tests-dummy.m */,
+				6A5919D8F22C95A53FF21EA174553DD7 /* Pods-Kota_Tests-frameworks.sh */,
+				ECC8B66293F51875567D2A88579C3033 /* Pods-Kota_Tests-resources.sh */,
+				73702E3D744AEF8CD26FFBB6F1B699F5 /* Pods-Kota_Tests-umbrella.h */,
+				C875F1437D9004E7D7A4E64D1B2F24C3 /* Pods-Kota_Tests.debug.xcconfig */,
+				5F53B54BEC8A2810FEEC7D5159791A79 /* Pods-Kota_Tests.release.xcconfig */,
+			);
+			name = "Pods-Kota_Tests";
+			path = "Target Support Files/Pods-Kota_Tests";
+			sourceTree = "<group>";
+		};
+		D219032857B5C47B43B582AB914E4623 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34992311002F066B5B92F18523960A31 /* Hero.framework */,
+				0D8131BAAA0C79F5A065753C3A221D74 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2E005C2AB5A3E024E42C04CAAC88771 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B96460352A70DA1DDFF9DF62FAE1CCDB /* Hero.modulemap */,
+				92A9FF8A54D7B8D419B45DB158749D93 /* Hero.xcconfig */,
+				A274DE4462D0D50965144A86D6EB1984 /* Hero-dummy.m */,
+				78827E488FA70F21B153B5C1400AA10C /* Hero-prefix.pch */,
+				210F738DE617ED8984511D8ECE963ACE /* Hero-umbrella.h */,
+				4C716A1B5F1B955B2640CC6BD7769082 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Hero";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		22B137B1411CE1460BDAD4A5E673AFD2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56A21DE22C2459C7C158A034DF3C46ED /* Kota-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AF76BFF16AF6BD8C006219365E0005C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFB7F92BB19963AFB316CDD45FC6F25C /* Pods-Kota_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82779E8A95ED2A7409BBDD49426A6DCB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F977B467C1C4EBDE66733417643F1DD /* Hero-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10610B414ACEBAFA1632D133D575990 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0C3992217F51CE5F8661B1FE5409799 /* Pods-Kota_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4A3E211676B243619B026D147D272253 /* Hero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6DED4535F841BD78B49E046B4C3A36B /* Build configuration list for PBXNativeTarget "Hero" */;
+			buildPhases = (
+				42F5D5F556CC9AB8C1D3798AF8424A5A /* Sources */,
+				21E6C68BEB179EF063E58DBBD27207D8 /* Frameworks */,
+				82779E8A95ED2A7409BBDD49426A6DCB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hero;
+			productName = Hero;
+			productReference = 617FDB476C9B59FF687DB852A3221292 /* Hero.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		59D77155613EBB5D37093257BABED97B /* Kota */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A881E04A745FD0B507995F092458421 /* Build configuration list for PBXNativeTarget "Kota" */;
+			buildPhases = (
+				C97CAB741D36AD737769DCA30BD16181 /* Sources */,
+				8523B11A765768C90C1B2C3A66EF4228 /* Frameworks */,
+				245C44D68240BC1CCCDCCD1999D52217 /* Resources */,
+				22B137B1411CE1460BDAD4A5E673AFD2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC6E464CC9BE3B680A2C7D01AFE26E19 /* PBXTargetDependency */,
+				5D2B3E05D004178525F3F0C49F0D582F /* PBXTargetDependency */,
+			);
+			name = Kota;
+			productName = Kota;
+			productReference = 14AC493F64ABD5683E42F809341F7068 /* Kota.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E156B0206EAEE63F1E7135F9C5187B3E /* Kota-Kota */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7D76428B8D3126CBF8B360BB0195F08 /* Build configuration list for PBXNativeTarget "Kota-Kota" */;
+			buildPhases = (
+				233320F6ACBB2EE4B59249077AB22D43 /* Sources */,
+				9979D4FAF58228BEC79B0BD6F42BCEE8 /* Frameworks */,
+				149A9B30F3622312A1735E023D0B426D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kota-Kota";
+			productName = "Kota-Kota";
+			productReference = 57441569C1C20715C8EF19BF04044D3C /* Kota.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		E5A15339994CA34E6F6038E297A0A477 /* Pods-Kota_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E1D468128E7971F11391530CB5B8A9E /* Build configuration list for PBXNativeTarget "Pods-Kota_Example" */;
+			buildPhases = (
+				C8E7873200CB3270E7821B6840541726 /* Sources */,
+				64038910A17EE79E7767EFFC92162931 /* Frameworks */,
+				B10610B414ACEBAFA1632D133D575990 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				820B640E93319E42291B6E5E26071050 /* PBXTargetDependency */,
+				E48EECD588993EC23CBB3278D979CF79 /* PBXTargetDependency */,
+			);
+			name = "Pods-Kota_Example";
+			productName = "Pods-Kota_Example";
+			productReference = 94116FFF127DD4DC0005628644EA184C /* Pods_Kota_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FEBDB28B78170018742434F2E4DAC802 /* Pods-Kota_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D5E3B3562B5F74E8D0F5B801CCFDB39 /* Build configuration list for PBXNativeTarget "Pods-Kota_Tests" */;
+			buildPhases = (
+				E642F94DF4BA1C90AA35065D98DC2E03 /* Sources */,
+				F89941A58A06E30BCB238688DF137B7C /* Frameworks */,
+				3AF76BFF16AF6BD8C006219365E0005C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Kota_Tests";
+			productName = "Pods-Kota_Tests";
+			productReference = CF671DB0FEDB61FED51B375A97189BDF /* Pods_Kota_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B1737763B6CEE7AFC27DC51059F8B25E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A3E211676B243619B026D147D272253 /* Hero */,
+				59D77155613EBB5D37093257BABED97B /* Kota */,
+				E156B0206EAEE63F1E7135F9C5187B3E /* Kota-Kota */,
+				E5A15339994CA34E6F6038E297A0A477 /* Pods-Kota_Example */,
+				FEBDB28B78170018742434F2E4DAC802 /* Pods-Kota_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		149A9B30F3622312A1735E023D0B426D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D99E43134038AA4E88CAD6FDFC7FA944 /* CloseButton.png in Resources */,
+				C56DC9BC2F36127BCF1C026DDDC65158 /* DoneButton.png in Resources */,
+				6D770E36544FC7EDCBA006F3AA1BEDF1 /* DoneButton@2x.png in Resources */,
+				9AFFB3CD35804AD63D4061A072DCF726 /* DoneButton@3x.png in Resources */,
+				A678C2C71641734C94E722304E378D56 /* GreenButton.png in Resources */,
+				7CFA1943FDB4C2089DE68A30E8097A30 /* ScreenShot.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		245C44D68240BC1CCCDCCD1999D52217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				111AF6E4F246E64FB7F3B0A6C64EAD56 /* Kota.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		233320F6ACBB2EE4B59249077AB22D43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42F5D5F556CC9AB8C1D3798AF8424A5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4871AB82D1BA4619362CECE2C157E239 /* Array+HeroModifier.swift in Sources */,
+				D48039A4AAAD63B84E8041F816AAE5CC /* BasePreprocessor.swift in Sources */,
+				CCACA9026494E6D39D374A4BD303F69C /* CALayer+Hero.swift in Sources */,
+				1EFCE8E2E39D6FF98A82A412DCDA22F4 /* CAMediaTimingFunction+Hero.swift in Sources */,
+				6095DBFEB1AF8CE765FA645A05459C2B /* CascadePreprocessor.swift in Sources */,
+				E91E80F3AA36C095A59C59A446271BF0 /* CG+Hero.swift in Sources */,
+				398917958AEE73A2ABA9DE141F4468CE /* DefaultAnimationPreprocessor.swift in Sources */,
+				A57C83E4371C1D6439BC82CDBEE32E08 /* DispatchQueue+Hero.swift in Sources */,
+				64B4D37F446B67C4A0D546ABF01ECDC6 /* DurationPreprocessor.swift in Sources */,
+				AC78190959872C81167ACC8F0B02BED9 /* Hero-dummy.m in Sources */,
+				DE7E529EF406ECBC3185D907151CDE78 /* Hero.swift in Sources */,
+				84B25B1A071858745816A95418F9F77A /* HeroAnimatorViewContext.swift in Sources */,
+				30E0982814D1F0971FA52AAE141325B8 /* HeroBaseController.swift in Sources */,
+				ABE0F6116DF5C33A310E215DE9AEE769 /* HeroContext.swift in Sources */,
+				BB7E6CA50EF56EF89CECA4DE5FEF66B9 /* HeroCoreAnimationViewContext.swift in Sources */,
+				2F44F37D2F6170E3B3186555CF82F575 /* HeroDebugPlugin.swift in Sources */,
+				BEB47A3CAB4F7D3C8EDA608599417596 /* HeroDebugView.swift in Sources */,
+				05F0808ED771EDC8628F839F16CB7EC8 /* HeroDefaultAnimator.swift in Sources */,
+				0054224BA8A23E8413AE5452B7C7D9C4 /* HeroIndependentController.swift in Sources */,
+				E57BB5C5A234EE3344BB5AAECFC7CC7A /* HeroModifier+HeroStringConvertible.swift in Sources */,
+				B62A16E73ADAFD9229C560E7C46ADB8E /* HeroModifier.swift in Sources */,
+				69C8F9CB4C695672395946F7C8A23E24 /* HeroPlugin.swift in Sources */,
+				1D030FD35221838E1BC264DBD51B3A93 /* HeroStringConvertible.swift in Sources */,
+				A72A258B0E285A00B063B0AF42E488A5 /* HeroTargetState.swift in Sources */,
+				CE4501723EC8667ADB9698705CC0AA04 /* HeroTypes.swift in Sources */,
+				355839E3459355665718D6358BA078A6 /* HeroViewPropertyViewContext.swift in Sources */,
+				29E1C79CB521E7299EFF904E327451A8 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */,
+				00CF7D513DF064760BF24C6A88E3E855 /* Lexer.swift in Sources */,
+				7DDE6E306CAB5E388629F6C6A561ECBA /* MatchPreprocessor.swift in Sources */,
+				0DA21E732596100C88761DA40C290796 /* Nodes.swift in Sources */,
+				A271792E9BD1BF7C0F7FC526D33C68C3 /* Parser.swift in Sources */,
+				731BDB378A5E0759C89BACA382B6412B /* Regex.swift in Sources */,
+				DE4FD12FD11924E71640A08AF3AFA2E4 /* SourcePreprocessor.swift in Sources */,
+				67BCB163E387C2E9288BC15CA3E4ACAF /* UIKit+Hero.swift in Sources */,
+				2808DEA4E83D337D6A0F0D3EE9AFC8CB /* UIView+Hero.swift in Sources */,
+				6B76015FB5A7E8450026BC11402C93E9 /* UIViewController+Hero.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8E7873200CB3270E7821B6840541726 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53E959FF033CA669329F84833762A739 /* Pods-Kota_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C97CAB741D36AD737769DCA30BD16181 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A2FF429694FC9ADDD45CCB98DD2456 /* Kota-dummy.m in Sources */,
+				F86DA4EBC6F290BDB1C8F83A0424930C /* Kota.swift in Sources */,
+				EBDE15F1F53C87BDD89BA9CEBA3F857A /* ScreenShotViewController.swift in Sources */,
+				A98834CC894591D34B13F3D9788C0F24 /* SendScreenShotViewController.swift in Sources */,
+				48235D5323F59B009A269DA487510017 /* SlackHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E642F94DF4BA1C90AA35065D98DC2E03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2806F1EF9DEB1DA9092C35D34AE12743 /* Pods-Kota_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D2B3E05D004178525F3F0C49F0D582F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Kota-Kota";
+			target = E156B0206EAEE63F1E7135F9C5187B3E /* Kota-Kota */;
+			targetProxy = 3DDF4DA043E3C32633098FE516209DEF /* PBXContainerItemProxy */;
+		};
+		820B640E93319E42291B6E5E26071050 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Hero;
+			target = 4A3E211676B243619B026D147D272253 /* Hero */;
+			targetProxy = A3AF0877BAF7B814A58698DF3F2095C0 /* PBXContainerItemProxy */;
+		};
+		AC6E464CC9BE3B680A2C7D01AFE26E19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Hero;
+			target = 4A3E211676B243619B026D147D272253 /* Hero */;
+			targetProxy = 6D61D89F8DC826CB45F0A41832C10B95 /* PBXContainerItemProxy */;
+		};
+		E48EECD588993EC23CBB3278D979CF79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kota;
+			target = 59D77155613EBB5D37093257BABED97B /* Kota */;
+			targetProxy = 0064CE5E9FD5E4C76A9C791C886CF614 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07E925C481DDD32B742C8B0D765D951D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B26DF02353B43FCDA7F00F984D76022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5363ED33E930852EE043B5C3A14CA41 /* Pods-Kota_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Kota_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Kota_Example/Pods-Kota_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Kota_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1A8E2C890A9F1DF5C35388C7AFE67855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92A9FF8A54D7B8D419B45DB158749D93 /* Hero.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Hero/Hero-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Hero/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Hero/Hero.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Hero;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2564296665DCC90FA0DB24417376AE1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B12A5E83D920365AADD8ADA206E6E46C /* Kota.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Kota/Kota-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kota/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kota/Kota.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Kota;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		29C4E054487C515ECE88BA2052098422 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B12A5E83D920365AADD8ADA206E6E46C /* Kota.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Kota/Kota-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kota/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kota/Kota.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Kota;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3C01F97392975B92E5F108C9B5924815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B12A5E83D920365AADD8ADA206E6E46C /* Kota.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Kota";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Kota/ResourceBundle-Kota-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = Kota;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3D85969EE6403DA3789C3DD17BC90D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C875F1437D9004E7D7A4E64D1B2F24C3 /* Pods-Kota_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Kota_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Kota_Tests/Pods-Kota_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Kota_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		585054B360F2039035F3DD466AB5EA72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B12A5E83D920365AADD8ADA206E6E46C /* Kota.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Kota";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Kota/ResourceBundle-Kota-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = Kota;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		79390F55023266E6FC4A5728391638A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49D1DA5791C332E4BB284E45BFF9A2EB /* Pods-Kota_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Kota_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Kota_Example/Pods-Kota_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Kota_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BB1C818461B25D08610725E95F3CCAD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F53B54BEC8A2810FEEC7D5159791A79 /* Pods-Kota_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Kota_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Kota_Tests/Pods-Kota_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Kota_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D49A5B494CC96A7F9B22105565EFFBD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92A9FF8A54D7B8D419B45DB158749D93 /* Hero.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Hero/Hero-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Hero/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Hero/Hero.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Hero;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EF2D8301FF834DFF974266BAE40AE54F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E1D468128E7971F11391530CB5B8A9E /* Build configuration list for PBXNativeTarget "Pods-Kota_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79390F55023266E6FC4A5728391638A7 /* Debug */,
+				0B26DF02353B43FCDA7F00F984D76022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF2D8301FF834DFF974266BAE40AE54F /* Debug */,
+				07E925C481DDD32B742C8B0D765D951D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A881E04A745FD0B507995F092458421 /* Build configuration list for PBXNativeTarget "Kota" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29C4E054487C515ECE88BA2052098422 /* Debug */,
+				2564296665DCC90FA0DB24417376AE1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D5E3B3562B5F74E8D0F5B801CCFDB39 /* Build configuration list for PBXNativeTarget "Pods-Kota_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D85969EE6403DA3789C3DD17BC90D51 /* Debug */,
+				BB1C818461B25D08610725E95F3CCAD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7D76428B8D3126CBF8B360BB0195F08 /* Build configuration list for PBXNativeTarget "Kota-Kota" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C01F97392975B92E5F108C9B5924815 /* Debug */,
+				585054B360F2039035F3DD466AB5EA72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6DED4535F841BD78B49E046B4C3A36B /* Build configuration list for PBXNativeTarget "Hero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A8E2C890A9F1DF5C35388C7AFE67855 /* Debug */,
+				D49A5B494CC96A7F9B22105565EFFBD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
