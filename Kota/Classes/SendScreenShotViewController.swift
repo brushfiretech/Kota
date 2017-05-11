@@ -14,6 +14,7 @@ class SendScreenShotViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var screenShot: UIImageView!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var closeButton: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
         isHeroEnabled = true

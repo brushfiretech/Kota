@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -192,7 +191,7 @@
                                     <constraint firstAttribute="height" constant="20" id="ysG-eV-MVF"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="CloseButton.png"/>
+                                <state key="normal" image="CloseButtonDark.png"/>
                                 <connections>
                                     <action selector="dismissButtonPressed:" destination="4U0-tY-RMY" eventType="touchUpInside" id="qAG-bf-Cwc"/>
                                     <action selector="dismissVScreen:" destination="zgh-Wm-Pmz" eventType="touchUpInside" id="q93-YI-YRi"/>
@@ -231,6 +230,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="closeButton" destination="oWR-17-bY0" id="jVU-iz-iah"/>
                         <outlet property="screenShot" destination="oB4-Mp-Iur" id="Nkb-DK-fCF"/>
                         <outlet property="textView" destination="vFX-Me-60Y" id="ayN-8a-hbS"/>
                     </connections>
@@ -242,6 +242,7 @@
     </scenes>
     <resources>
         <image name="CloseButton.png" width="77" height="77"/>
+        <image name="CloseButtonDark.png" width="88" height="88"/>
         <image name="DoneButton.png" width="118" height="118"/>
     </resources>
 </document>

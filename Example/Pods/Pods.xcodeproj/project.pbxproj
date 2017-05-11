@@ -50,6 +50,8 @@
 		AC78190959872C81167ACC8F0B02BED9 /* Hero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A274DE4462D0D50965144A86D6EB1984 /* Hero-dummy.m */; };
 		AF04AD552E6BE94703E8EC8BEAEEA076 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD74401E14D74F371B7CD4805919BBB /* Foundation.framework */; };
 		B62A16E73ADAFD9229C560E7C46ADB8E /* HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDC21FC643DF69C19B3A14F8FB8DEC /* HeroModifier.swift */; };
+		B94E467B1EC43B1300A6B77C /* RecodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E467A1EC43B1300A6B77C /* RecodingViewController.swift */; };
+		B94E467D1EC4BB1300A6B77C /* CloseButtonDark.png in Resources */ = {isa = PBXBuildFile; fileRef = B94E467C1EC4BB1300A6B77C /* CloseButtonDark.png */; };
 		BADD91D0FAFF2091B3C94270DB4568D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD74401E14D74F371B7CD4805919BBB /* Foundation.framework */; };
 		BB7E6CA50EF56EF89CECA4DE5FEF66B9 /* HeroCoreAnimationViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7344F8AC761ADA3E3555A1FB29F4A4AF /* HeroCoreAnimationViewContext.swift */; };
 		BEB47A3CAB4F7D3C8EDA608599417596 /* HeroDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA5F0273A7CE7273E38605D1BF07A4F /* HeroDebugView.swift */; };
@@ -106,7 +108,7 @@
 		07BA069B2F82957DE29CB7A43A1F3B8C /* Pods-Kota_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kota_Tests-dummy.m"; sourceTree = "<group>"; };
 		0A0E3F3433691C9196A724990F56614E /* DoneButton.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = DoneButton.png; sourceTree = "<group>"; };
 		0F64276CEA0D5F7D44ED638A5B262292 /* HeroModifier+HeroStringConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroModifier+HeroStringConvertible.swift"; path = "Sources/HeroModifier+HeroStringConvertible.swift"; sourceTree = "<group>"; };
-		14AC493F64ABD5683E42F809341F7068 /* Kota.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kota.framework; path = Kota.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14AC493F64ABD5683E42F809341F7068 /* Kota.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kota.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A803C01142A60B9FAC4CEA7FD815638 /* CascadePreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CascadePreprocessor.swift; path = Sources/Preprocessors/CascadePreprocessor.swift; sourceTree = "<group>"; };
 		1B88915CE2B42D0146CA5F4E12781798 /* Pods-Kota_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kota_Example-umbrella.h"; sourceTree = "<group>"; };
 		1CD74401E14D74F371B7CD4805919BBB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -133,14 +135,14 @@
 		4C716A1B5F1B955B2640CC6BD7769082 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B494C76A682AFB467F426450F24FFD /* HeroBaseController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroBaseController.swift; path = Sources/HeroBaseController.swift; sourceTree = "<group>"; };
 		56A7C0C466A9B1973B3027FBDBE2647F /* CAMediaTimingFunction+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CAMediaTimingFunction+Hero.swift"; path = "Sources/Extensions/CAMediaTimingFunction+Hero.swift"; sourceTree = "<group>"; };
-		57441569C1C20715C8EF19BF04044D3C /* Kota.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Kota.bundle; path = Kota.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		57441569C1C20715C8EF19BF04044D3C /* Kota.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Kota.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5930B03D59274407A0672E636327ED52 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		5A38E905D77115E102E6466AA26DBF7F /* UIView+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Hero.swift"; path = "Sources/Extensions/UIView+Hero.swift"; sourceTree = "<group>"; };
-		5C0583855444FA7A32602A93E8BF46DC /* Pods-Kota_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Kota_Example.modulemap"; sourceTree = "<group>"; };
+		5C0583855444FA7A32602A93E8BF46DC /* Pods-Kota_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Kota_Example.modulemap"; sourceTree = "<group>"; };
 		5C7873A68F8789B9437922964486371D /* ResourceBundle-Kota-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Kota-Info.plist"; sourceTree = "<group>"; };
 		5E710F27D3EA626F79734BFAFC8373C7 /* CG+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CG+Hero.swift"; path = "Sources/Extensions/CG+Hero.swift"; sourceTree = "<group>"; };
 		5F53B54BEC8A2810FEEC7D5159791A79 /* Pods-Kota_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kota_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		617FDB476C9B59FF687DB852A3221292 /* Hero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Hero.framework; path = Hero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		617FDB476C9B59FF687DB852A3221292 /* Hero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5919D8F22C95A53FF21EA174553DD7 /* Pods-Kota_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kota_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		6B3A36E421777D4EDE8281B2BA3717A1 /* HeroContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroContext.swift; path = Sources/HeroContext.swift; sourceTree = "<group>"; };
 		6C317C845E7FF17C915256FA91D100F6 /* DurationPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DurationPreprocessor.swift; path = Sources/Preprocessors/DurationPreprocessor.swift; sourceTree = "<group>"; };
@@ -153,28 +155,31 @@
 		8E38E6569182202735680837339F386F /* ScreenShotViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScreenShotViewController.swift; sourceTree = "<group>"; };
 		8FF56A12F12C7748AA19498EF8D33F91 /* Pods-Kota_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kota_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		90B224695EE7EA7C745CF9A5BF46D44E /* Nodes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Nodes.swift; path = Sources/Parser/Nodes.swift; sourceTree = "<group>"; };
-		910567821F508665E76168F8AC63B6AF /* Pods-Kota_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Kota_Tests.modulemap"; sourceTree = "<group>"; };
+		910567821F508665E76168F8AC63B6AF /* Pods-Kota_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Kota_Tests.modulemap"; sourceTree = "<group>"; };
 		9279B4BCAD759BD41E8C41BD75A8A097 /* HeroDebugPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroDebugPlugin.swift; path = "Sources/Debug Plugin/HeroDebugPlugin.swift"; sourceTree = "<group>"; };
 		92A9FF8A54D7B8D419B45DB158749D93 /* Hero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Hero.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94116FFF127DD4DC0005628644EA184C /* Pods_Kota_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kota_Example.framework; path = "Pods-Kota_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94116FFF127DD4DC0005628644EA184C /* Pods_Kota_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kota_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A274DE4462D0D50965144A86D6EB1984 /* Hero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Hero-dummy.m"; sourceTree = "<group>"; };
 		AF1D14C209B66AB8F3B83A21DF605505 /* Regex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Regex.swift; path = Sources/Parser/Regex.swift; sourceTree = "<group>"; };
 		B12A5E83D920365AADD8ADA206E6E46C /* Kota.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kota.xcconfig; sourceTree = "<group>"; };
 		B4A3CBAB8437EDDC88E101B641070A5F /* DispatchQueue+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Hero.swift"; path = "Sources/Extensions/DispatchQueue+Hero.swift"; sourceTree = "<group>"; };
 		B83B058C8FCEFA9974F40D30AA5C11AF /* Kota-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kota-dummy.m"; sourceTree = "<group>"; };
-		B96460352A70DA1DDFF9DF62FAE1CCDB /* Hero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Hero.modulemap; sourceTree = "<group>"; };
+		B94E46791EC43AFF00A6B77C /* Recording.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recording.storyboard; sourceTree = "<group>"; };
+		B94E467A1EC43B1300A6B77C /* RecodingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecodingViewController.swift; sourceTree = "<group>"; };
+		B94E467C1EC4BB1300A6B77C /* CloseButtonDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButtonDark.png; sourceTree = "<group>"; };
+		B96460352A70DA1DDFF9DF62FAE1CCDB /* Hero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Hero.modulemap; sourceTree = "<group>"; };
 		BBB1E9315F1625CD0BE643BDBAFF69F6 /* HeroPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroPlugin.swift; path = Sources/HeroPlugin.swift; sourceTree = "<group>"; };
 		BCC40EC50520B13764B051A929D574C9 /* SendScreenShotViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SendScreenShotViewController.swift; sourceTree = "<group>"; };
 		BDDE188B89ED1EC18BB6E44739873448 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/Parser/Parser.swift; sourceTree = "<group>"; };
-		BF9A773E2DED3F0A90687C9DC628F7A0 /* Kota.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Kota.modulemap; sourceTree = "<group>"; };
+		BF9A773E2DED3F0A90687C9DC628F7A0 /* Kota.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Kota.modulemap; sourceTree = "<group>"; };
 		BFA77F82F71721CC215E2D03D45602A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C390B377601D8EF6300C9442722DCA99 /* Array+HeroModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+HeroModifier.swift"; path = "Sources/Extensions/Array+HeroModifier.swift"; sourceTree = "<group>"; };
 		C5363ED33E930852EE043B5C3A14CA41 /* Pods-Kota_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kota_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C875F1437D9004E7D7A4E64D1B2F24C3 /* Pods-Kota_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kota_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB985EB78C555CB66682E1CF88096DCE /* ScreenShot.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = ScreenShot.storyboard; sourceTree = "<group>"; };
 		CCF914B64B20C85D6AC1923163B7BB40 /* GreenButton.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = GreenButton.png; sourceTree = "<group>"; };
-		CF671DB0FEDB61FED51B375A97189BDF /* Pods_Kota_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kota_Tests.framework; path = "Pods-Kota_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF671DB0FEDB61FED51B375A97189BDF /* Pods_Kota_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kota_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9CBB91F82E7A71424CD91849C6815B /* IgnoreSubviewModifiersPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IgnoreSubviewModifiersPreprocessor.swift; path = Sources/Preprocessors/IgnoreSubviewModifiersPreprocessor.swift; sourceTree = "<group>"; };
 		D99FAD05F1E1109654014F51EBFEB2CA /* BasePreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BasePreprocessor.swift; path = Sources/Preprocessors/BasePreprocessor.swift; sourceTree = "<group>"; };
 		D9F1D49FA76089D6C982DCA27B7B68B7 /* UIViewController+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Hero.swift"; path = "Sources/Extensions/UIViewController+Hero.swift"; sourceTree = "<group>"; };
@@ -280,7 +285,6 @@
 			children = (
 				828F73FC1BE91A19362563841613CA21 /* Classes */,
 			);
-			name = Kota;
 			path = Kota;
 			sourceTree = "<group>";
 		};
@@ -303,8 +307,8 @@
 				8E38E6569182202735680837339F386F /* ScreenShotViewController.swift */,
 				BCC40EC50520B13764B051A929D574C9 /* SendScreenShotViewController.swift */,
 				709738AE30F99B839E29D2ABA69E2FBE /* SlackHelper.swift */,
+				B94E467A1EC43B1300A6B77C /* RecodingViewController.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -356,7 +360,6 @@
 				D9F1D49FA76089D6C982DCA27B7B68B7 /* UIViewController+Hero.swift */,
 				E2E005C2AB5A3E024E42C04CAAC88771 /* Support Files */,
 			);
-			name = Hero;
 			path = Hero;
 			sourceTree = "<group>";
 		};
@@ -365,7 +368,6 @@
 			children = (
 				C7CADCABAB6E5E2DA1CBEAE866796688 /* Assets */,
 			);
-			name = Kota;
 			path = Kota;
 			sourceTree = "<group>";
 		};
@@ -411,14 +413,15 @@
 		C7CADCABAB6E5E2DA1CBEAE866796688 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B94E467C1EC4BB1300A6B77C /* CloseButtonDark.png */,
 				2695EF7FFEF3AAA8479BD53F0E4725D5 /* CloseButton.png */,
 				0A0E3F3433691C9196A724990F56614E /* DoneButton.png */,
 				2FB411B930573FB27FEEE98CF20ED217 /* DoneButton@2x.png */,
 				30A0DA7C2D6DDAD132D720014A439854 /* DoneButton@3x.png */,
 				CCF914B64B20C85D6AC1923163B7BB40 /* GreenButton.png */,
 				CB985EB78C555CB66682E1CF88096DCE /* ScreenShot.storyboard */,
+				B94E46791EC43AFF00A6B77C /* Recording.storyboard */,
 			);
-			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
@@ -650,6 +653,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94E467D1EC4BB1300A6B77C /* CloseButtonDark.png in Resources */,
 				111AF6E4F246E64FB7F3B0A6C64EAD56 /* Kota.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,6 +688,7 @@
 				ABE0F6116DF5C33A310E215DE9AEE769 /* HeroContext.swift in Sources */,
 				BB7E6CA50EF56EF89CECA4DE5FEF66B9 /* HeroCoreAnimationViewContext.swift in Sources */,
 				2F44F37D2F6170E3B3186555CF82F575 /* HeroDebugPlugin.swift in Sources */,
+				B94E467B1EC43B1300A6B77C /* RecodingViewController.swift in Sources */,
 				BEB47A3CAB4F7D3C8EDA608599417596 /* HeroDebugView.swift in Sources */,
 				05F0808ED771EDC8628F839F16CB7EC8 /* HeroDefaultAnimator.swift in Sources */,
 				0054224BA8A23E8413AE5452B7C7D9C4 /* HeroIndependentController.swift in Sources */,

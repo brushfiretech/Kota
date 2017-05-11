@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import ReplayKit
 
 open class KotaController: UIViewController {
     
@@ -42,8 +43,19 @@ open class KotaController: UIViewController {
     let cameraButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(red: 100 / 255.0, green: 219 / 255.0, blue: 111 / 255.0, alpha: 1.0)
+        button.setTitle("📷", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
+        button.titleLabel?.numberOfLines = 1
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
+        button.titleLabel?.lineBreakMode = .byClipping
+        return button
+    }()
+    
+    let recordButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = UIColor(red: 100 / 255.0, green: 219 / 255.0, blue: 111 / 255.0, alpha: 1.0)
         button.layer.cornerRadius = 5
-        button.setTitle("Screenshot", for: .normal)
+        button.setTitle("Record", for: .normal)
         return button
     }()
     
@@ -71,15 +83,23 @@ open class KotaController: UIViewController {
         mainView.addSubview(contentView)
         
         cameraButton.addTarget(self, action: #selector(goToScreenShot), for: .touchUpInside)
+        recordButton.addTarget(self, action: #selector(recordButtonPressed), for: .touchUpInside)
 
         contentView.addSubview(cameraButton)
+//        contentView.addSubview(recordButton)
         contentView.addConstraintsWithFormat("H:[v0(\(viewWidth))]|", views: cameraButton)
-        contentView.addConstraintsWithFormat("V:[v0(35)]|", views: cameraButton)
+        contentView.addConstraintsWithFormat("V:[v0(\(viewWidth))]|", views: cameraButton)
+        cameraButton.layer.cornerRadius = CGFloat(viewWidth / 2)
+        cameraButton.layer.masksToBounds = true
+//        contentView.addConstraintsWithFormat("V:[v0(35)]-10-[v1(35)]|", views: recordButton, cameraButton)
+        
+//        contentView.addConstraintsWithFormat("H:[v0(\(viewWidth))]|", views: recordButton)
         
         showView()
         
         self.view = mainView
         
+        window.recordButton = recordButton
         window.button = cameraButton
     }
     
@@ -124,6 +144,52 @@ open class KotaController: UIViewController {
         KotaData.shared.screenshotImage = image
     }
     
+    func recordButtonPressed() {
+        print("Starting Recording")
+        let sharedRecorder = RPScreenRecorder.shared()
+        sharedRecorder.delegate = self
+        
+        print(sharedRecorder.isAvailable)
+        
+        if #available(iOS 10.0, *) {
+            sharedRecorder.startRecording { error in
+                print(error.debugDescription)
+                
+                let when = DispatchTime.now() + 6
+                DispatchQueue.main.asyncAfter(deadline: when) {
+                    self.stopRecording()
+                }
+            }
+        }
+    }
+    
+    func stopRecording() {
+        print("Stoping Recording")
+        let sharedRecorder = RPScreenRecorder.shared()
+        print(sharedRecorder.isRecording)
+        
+        sharedRecorder.stopRecording { [unowned self] previewViewController, error in
+            
+            guard let previewViewController = previewViewController else {
+                return
+            }
+            
+            previewViewController.previewControllerDelegate = self
+            
+            DispatchQueue.main.async { [unowned self] in
+                self.present(previewViewController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+
+    
+    func selectImageFromPhotoLibrary() {
+
+    }
+    
+
+    
     public func goToScreenShot() {
 //        captureScreen()
         
@@ -150,8 +216,38 @@ open class KotaController: UIViewController {
     
 }
 
+extension KotaController: RPScreenRecorderDelegate {
+    public func screenRecorderDidChangeAvailability(_ screenRecorder: RPScreenRecorder) {
+        print(screenRecorder.isAvailable)
+    }
+    
+    public func screenRecorder(_ screenRecorder: RPScreenRecorder, didStopRecordingWithError error: Error, previewViewController: RPPreviewViewController?) {
+        print(error.localizedDescription)
+    }
+}
+
+extension KotaController: RPPreviewViewControllerDelegate {
+    public func previewControllerDidFinish(_ previewController: RPPreviewViewController) {
+        previewController.dismiss(animated: true, completion: nil)
+    }
+    
+    public func previewController(_ previewController: RPPreviewViewController, didFinishWithActivityTypes activityTypes: Set<String>) {
+        if activityTypes.contains("com.apple.UIKit.activity.SaveToCameraRoll") {
+            print("Save to CameraRoll")
+            // do something
+            let when = DispatchTime.now() + 0.5
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                self.selectImageFromPhotoLibrary()
+            }
+            
+        }
+    }
+}
+
+
 public class KotaWindow: UIWindow {
     var button: UIButton?
+    var recordButton: UIButton?
     
     public init() {
         super.init(frame: UIScreen.main.bounds)
@@ -163,9 +259,22 @@ public class KotaWindow: UIWindow {
     }
     
     override public func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-        guard let button = button else { return false }
-        let buttonPoint = convert(point, to: button)
-        return button.point(inside: buttonPoint, with: event)
+        if checkPoint(inside: point, button: button, with: event) {
+            return true
+        }
+        if checkPoint(inside: point, button: recordButton, with: event) {
+            return true
+        }
+        
+        return false
+    }
+    
+    private func checkPoint(inside point: CGPoint, button: UIButton?, with event: UIEvent?) -> Bool {
+        guard let btn = button else { return false }
+        
+        let buttonPoint = convert(point, to: btn)
+        
+        return btn.point(inside: buttonPoint, with: event)
     }
 }
 
