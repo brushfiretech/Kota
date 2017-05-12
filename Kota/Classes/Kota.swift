@@ -10,10 +10,36 @@ import Foundation
 import UIKit
 import ReplayKit
 
+open class KotaTrelloSetup {
+    var apiKey: String?
+    var authToken: String?
+    var idList: String?
+}
+
 open class KotaController: UIViewController {
     
     public static let shared = KotaController()
+    public static let setup = KotaTrelloSetup()
+    
     let slackClient = SlackClient.sharedInstance
+    
+    open func setupTrello(apiKey: String, authToken: String, idList: String){
+        KotaController.setup.apiKey = apiKey
+        KotaController.setup.authToken = authToken
+        KotaController.setup.idList = idList
+    }
+    
+    var apiKey: String? = {
+        return KotaController.setup.apiKey
+    }()
+    
+    var authToken: String? = {
+        return KotaController.setup.authToken
+    }()
+    
+    var idList: String? = {
+        return KotaController.setup.idList
+    }()
     
     public var slackChannelString: String?
     public var slackTokenString: String? {
@@ -33,6 +59,7 @@ open class KotaController: UIViewController {
     var rightX: CGFloat?
     
     let contentView = UIView()
+    public var kotaHidden = true
     
     private(set) var isHidden = false
     
@@ -95,12 +122,20 @@ open class KotaController: UIViewController {
         
 //        contentView.addConstraintsWithFormat("H:[v0(\(viewWidth))]|", views: recordButton)
         
-        showView()
-        
         self.view = mainView
         
         window.recordButton = recordButton
         window.button = cameraButton
+    }
+    
+    public func toggleView() {
+        if kotaHidden {
+            showView()
+            kotaHidden = false
+        } else {
+            hideView()
+            kotaHidden = true
+        }
     }
     
     public func showView() {

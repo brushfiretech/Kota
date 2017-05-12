@@ -22,7 +22,6 @@ class SendScreenShotViewController: UIViewController, UITextViewDelegate {
         screenShot.image = KotaData.shared.screenshotImage
         
         self.textView.delegate = self
-        
     }
     
     var sendButton: UIButton = {
@@ -65,19 +64,44 @@ class SendScreenShotViewController: UIViewController, UITextViewDelegate {
         return ""
     }
     
+//    func sendFeedBack() {
+//        DispatchQueue.global(qos: .background).async {
+//            print("This is run on the background queue")
+//            if let slackChannel = KotaController.shared.slackChannelString {
+//                if let screenShotImage = self.screenShot.image {
+//                    if let savedImagePath = self.saveImage(image: screenShotImage, name: "screenshot") as? String {
+//                        print("Saved Image Path: \(savedImagePath)")
+//                        SlackClient.sharedInstance.uploadFile(filePath: savedImagePath, fileName: "screenshot", channels: "#\(slackChannel)", comments: self.textView.text) { (res, error) in
+//                            if error != nil {
+//                                print("Unable to send screenshot over Slack.")
+//                            } else {
+//                                print("Sent screenshot over Slack.")
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//        
+//        let presentingViewController = self.presentingViewController
+//        self.dismiss(animated: false, completion: {
+//            presentingViewController!.dismiss(animated: true, completion: {})
+//        })
+//    }
+    
     func sendFeedBack() {
-        DispatchQueue.global(qos: .background).async {
-            print("This is run on the background queue")
-            if let slackChannel = KotaController.shared.slackChannelString {
-                if let screenShotImage = self.screenShot.image {
-                    if let savedImagePath = self.saveImage(image: screenShotImage, name: "screenshot") as? String {
-                        print("Saved Image Path: \(savedImagePath)")
-                        SlackClient.sharedInstance.uploadFile(filePath: savedImagePath, fileName: "screenshot", channels: "#\(slackChannel)", comments: self.textView.text) { (res, error) in
-                            if error != nil {
-                                print("Unable to send screenshot over Slack.")
-                            } else {
-                                print("Sent screenshot over Slack.")
-                            }
+        if let apiKey = KotaController.setup.apiKey, let authToken = KotaController.setup.authToken, let idList = KotaController.setup.idList {
+            let trello = Trello.init(apiKey: apiKey, authToken: authToken)
+            if let screenShotImage = self.screenShot.image {
+                if let savedImagePath = self.saveImage(image: screenShotImage, name: "screenshot") as? String {
+                    
+                    if FileManager.default.fileExists(atPath: savedImagePath) {
+                        let url = URL(fileURLWithPath: savedImagePath)
+                        do {
+                            let data = try Data(contentsOf: url)
+                            trello.postCard(id: idList, name: "Feedback!", feedBack: self.textView.text, file: UIImage(data: data)!)
+                        } catch {
+                            print("Error loading image : \(error)")
                         }
                     }
                 }
