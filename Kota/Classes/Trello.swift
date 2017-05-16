@@ -62,7 +62,49 @@ extension Trello {
                 }
             }
         }
-
+    }
+    
+    
+    public func postVideoCard(id: String, name: String, feedBack: String, file: Data) {
+        DispatchQueue.main.async {
+            let banner = StatusBarNotificationBanner(title: "Submitting Feedback", style: .info)
+            banner.show()
+        }
+        
+        if let params: [String: Any] = self.authParameters + ["idList": id, "desc": feedBack, "name": name, "pos": "top"] {
+            if let header: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded"] {
+                //                Alamofire.request(Trello.baseURLString, method: .post, parameters: params, headers: header).responseJSON { response in
+                //                    debugPrint(response)
+                //
+                //                    if let json = response.result.value {
+                //                        print("JSON: \(json)")
+                //                    }
+                //                }
+                
+                Alamofire.upload(
+                    multipartFormData: { MultipartFormData in
+                        for (key, value) in params {
+                            MultipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+                        }
+                        
+                        MultipartFormData.append(file, withName: "fileSource", fileName: "upload.mov", mimeType: "video/mov")
+                }, to: Trello.baseURLString) { (result) in
+                    
+                    switch result {
+                    case .success(let upload, _, _):
+                        upload.responseJSON { response in
+                            print("Created a new trello card")
+                            DispatchQueue.main.async {
+                                let banner = StatusBarNotificationBanner(title: "Thanks for the feedback!", style: .success)
+                                banner.show()
+                            }
+                        }
+                    case .failure(let encodingError): break
+                    print(encodingError)
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import ReplayKit
+import NotificationBannerSwift
 
 open class KotaTrelloSetup {
     var apiKey: String?
@@ -47,12 +47,13 @@ open class KotaController: UIViewController {
             slackClient.setup(slackToken: slackTokenString!)
         }
     }
-
+    
     public var button: UIButton!
     let window = KotaWindow()
     let viewWidth = 100
-    let viewHeight = 120
+    let viewHeight = 210
     var screenshot: UIImage?
+    let recorder = ScreenRecorder.shared
     
     // Window Properties
     var midY: CGFloat?
@@ -81,8 +82,11 @@ open class KotaController: UIViewController {
     let recordButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(red: 100 / 255.0, green: 219 / 255.0, blue: 111 / 255.0, alpha: 1.0)
-        button.layer.cornerRadius = 5
-        button.setTitle("Record", for: .normal)
+        button.setTitle("📹", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
+        button.titleLabel?.numberOfLines = 1
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
+        button.titleLabel?.lineBreakMode = .byClipping
         return button
     }()
     
@@ -95,7 +99,7 @@ open class KotaController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(note:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
     }
-
+    
     open override func loadView() {
         let mainView = UIView()
         
@@ -111,19 +115,22 @@ open class KotaController: UIViewController {
         
         cameraButton.addTarget(self, action: #selector(goToScreenShot), for: .touchUpInside)
         recordButton.addTarget(self, action: #selector(recordButtonPressed), for: .touchUpInside)
-
+        
         contentView.addSubview(cameraButton)
-//        contentView.addSubview(recordButton)
-        contentView.addConstraintsWithFormat("H:[v0(\(viewWidth))]|", views: cameraButton)
-        contentView.addConstraintsWithFormat("V:[v0(\(viewWidth))]|", views: cameraButton)
+        contentView.addSubview(recordButton)
+        
         cameraButton.layer.cornerRadius = CGFloat(viewWidth / 2)
         cameraButton.layer.masksToBounds = true
-//        contentView.addConstraintsWithFormat("V:[v0(35)]-10-[v1(35)]|", views: recordButton, cameraButton)
         
-//        contentView.addConstraintsWithFormat("H:[v0(\(viewWidth))]|", views: recordButton)
+        
+        recordButton.layer.cornerRadius = CGFloat(viewWidth / 2)
+        recordButton.layer.masksToBounds = true
+        
+        contentView.addConstraintsWithFormat("H:[v0(\(viewWidth))]|", views: cameraButton)
+        contentView.addConstraintsWithFormat("H:[v0(\(viewWidth))]|", views: recordButton)
+        contentView.addConstraintsWithFormat("V:|-[v0(\(viewWidth))]-10-[v1(\(viewWidth))]", views: recordButton, cameraButton)
         
         self.view = mainView
-        
         window.recordButton = recordButton
         window.button = cameraButton
     }
@@ -179,54 +186,37 @@ open class KotaController: UIViewController {
         KotaData.shared.screenshotImage = image
     }
     
-    func recordButtonPressed() {
-        print("Starting Recording")
-        let sharedRecorder = RPScreenRecorder.shared()
-        sharedRecorder.delegate = self
-        
-        print(sharedRecorder.isAvailable)
-        
-        if #available(iOS 10.0, *) {
-            sharedRecorder.startRecording { error in
-                print(error.debugDescription)
-                
-                let when = DispatchTime.now() + 6
-                DispatchQueue.main.asyncAfter(deadline: when) {
-                    self.stopRecording()
-                }
+    public func recordButtonPressed() {
+        if recorder.isRecording {
+            stopRecordingAndShowPreview()
+        } else {
+            print("Starting Recording")
+            recorder.startRecording()
+            let when = DispatchTime.now() + 10
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                self.stopRecordingAndShowPreview()
+            }
+            
+            DispatchQueue.main.async {
+                self.hideView()
+                let banner = StatusBarNotificationBanner(title: "10 Second Recording", style: .danger)
+                banner.duration = 10
+                banner.show()
             }
         }
     }
     
-    func stopRecording() {
-        print("Stoping Recording")
-        let sharedRecorder = RPScreenRecorder.shared()
-        print(sharedRecorder.isRecording)
-        
-        sharedRecorder.stopRecording { [unowned self] previewViewController, error in
-            
-            guard let previewViewController = previewViewController else {
-                return
-            }
-            
-            previewViewController.previewControllerDelegate = self
-            
-            DispatchQueue.main.async { [unowned self] in
-                self.present(previewViewController, animated: true, completion: nil)
-            }
-        }
+    public func stopRecordingAndShowPreview() {
+        print("Stopping Recording")
+        recorder.saveToCamera = false
+        recorder.stopRecording(callback: { (savedPath) in
+            KotaData.shared.tempVideoURL = savedPath
+            self.goToVideoPreview()
+        })
     }
-    
-
-    
-    func selectImageFromPhotoLibrary() {
-
-    }
-    
-
     
     public func goToScreenShot() {
-//        captureScreen()
+        //        captureScreen()
         
         
         print("Button tapped")
@@ -249,35 +239,28 @@ open class KotaController: UIViewController {
         vc?.present(camVC, animated: true, completion: nil)
     }
     
-}
-
-extension KotaController: RPScreenRecorderDelegate {
-    public func screenRecorderDidChangeAvailability(_ screenRecorder: RPScreenRecorder) {
-        print(screenRecorder.isAvailable)
-    }
-    
-    public func screenRecorder(_ screenRecorder: RPScreenRecorder, didStopRecordingWithError error: Error, previewViewController: RPPreviewViewController?) {
-        print(error.localizedDescription)
-    }
-}
-
-extension KotaController: RPPreviewViewControllerDelegate {
-    public func previewControllerDidFinish(_ previewController: RPPreviewViewController) {
-        previewController.dismiss(animated: true, completion: nil)
-    }
-    
-    public func previewController(_ previewController: RPPreviewViewController, didFinishWithActivityTypes activityTypes: Set<String>) {
-        if activityTypes.contains("com.apple.UIKit.activity.SaveToCameraRoll") {
-            print("Save to CameraRoll")
-            // do something
-            let when = DispatchTime.now() + 0.5
-            DispatchQueue.main.asyncAfter(deadline: when) {
-                self.selectImageFromPhotoLibrary()
-            }
-            
+    public func goToVideoPreview() {
+        print("Button tapped")
+        
+        guard let mainWindow = UIApplication.shared.keyWindow else {
+            print("Not found window")
+            return
         }
+        
+        let podBundle = Bundle(for: KotaController.self)
+        
+        let bundleURL = podBundle.url(forResource: "Kota", withExtension: "bundle")
+        let bundle = Bundle(url: bundleURL!)!
+        
+        let storyboard = UIStoryboard(name: "Recording", bundle: bundle)
+        let previewVideoVC = storyboard.instantiateViewController(withIdentifier: "previewVideoViewController") as! PreviewVideoViewController
+        let vc: UIViewController? = mainWindow.rootViewController?.presentedViewController ?? mainWindow.rootViewController
+        vc?.present(previewVideoVC, animated: true, completion: nil)
     }
+    
 }
+
+
 
 
 public class KotaWindow: UIWindow {
@@ -294,6 +277,7 @@ public class KotaWindow: UIWindow {
     }
     
     override public func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        
         if checkPoint(inside: point, button: button, with: event) {
             return true
         }
@@ -330,6 +314,7 @@ public class KotaData {
     static let shared = KotaData()
     
     var screenshotImage: UIImage?
+    var tempVideoURL: String?
 }
 
 //        let button = UIButton(type: .custom)
