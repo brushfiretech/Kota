@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Hero
 
 class SendScreenShotViewController: UIViewController, UITextViewDelegate {
     
@@ -17,8 +16,6 @@ class SendScreenShotViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var closeButton: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
-        isHeroEnabled = true
-        
         screenShot.image = KotaData.shared.screenshotImage
         
         self.textView.delegate = self

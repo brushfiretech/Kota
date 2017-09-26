@@ -29,7 +29,7 @@ public class NotificationBannerQueue: NSObject {
     public static let `default` = NotificationBannerQueue()
     
     /// The notification banners currently placed on the queue
-    private var banners: [BaseNotificationBanner] = []
+    private(set) var banners: [BaseNotificationBanner] = []
     
     /// The current number of notification banners on the queue
     public var numberOfBanners: Int {
@@ -48,11 +48,11 @@ public class NotificationBannerQueue: NSObject {
             banners.append(banner)
             
             if banners.index(of: banner) == 0 {
-                banner.show(placeOnQueue: false)
+                banner.show(placeOnQueue: false, bannerPosition: banner.bannerPosition)
             }
             
         } else {
-            banner.show(placeOnQueue: false)
+            banner.show(placeOnQueue: false, bannerPosition: banner.bannerPosition)
             
             if let firstBanner = banners.first {
                 firstBanner.suspend()
@@ -65,13 +65,15 @@ public class NotificationBannerQueue: NSObject {
     
     /**
         Shows the next notificaiton banner on the queue if one exists
-        -parameter onEmpty: The closure to execute if the queue is empty
+        -parameter callback: The closure to execute after a banner is shown or when the queue is empty
     */
-    func showNext(onEmpty: (() -> Void)) {
-    
-        banners.remove(at: 0)
+    func showNext(callback: ((_ isEmpty: Bool) -> Void)) {
+
+        if !banners.isEmpty {
+          banners.removeFirst()
+        }
         guard let banner = banners.first else {
-            onEmpty()
+            callback(true)
             return
         }
         
@@ -80,5 +82,14 @@ public class NotificationBannerQueue: NSObject {
         } else {
             banner.show(placeOnQueue: false)
         }
+        
+        callback(false)
+    }
+    
+    /**
+        Removes all notification banners from the queue
+    */
+    public func removeAll() {
+        banners.removeAll()
     }
 }

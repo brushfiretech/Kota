@@ -17,21 +17,39 @@
  */
 
 import UIKit
-import MarqueeLabel
+
+#if CARTHAGE_CONFIG
+    import MarqueeLabelSwift
+#else
+    import MarqueeLabel
+#endif
 
 public class StatusBarNotificationBanner: BaseNotificationBanner {
     
+    public override var bannerHeight: CGFloat {
+        get {
+            if let customBannerHeight = customBannerHeight {
+                return customBannerHeight
+            } else if shouldAdjustForIphoneX() {
+                return super.bannerHeight
+            } else {
+                return 20.0
+            }
+        } set {
+            customBannerHeight = newValue
+        }
+    }
+    
     override init(style: BannerStyle, colors: BannerColorsProtocol? = nil) {
         super.init(style: style, colors: colors)
-        bannerHeight = 20.0
-        
+
         titleLabel = MarqueeLabel()
         titleLabel?.animationDelay = 2
         titleLabel?.type = .leftRight
         titleLabel!.font = UIFont.systemFont(ofSize: 12.5, weight: UIFontWeightBold)
         titleLabel!.textAlignment = .center
         titleLabel!.textColor = .white
-        addSubview(titleLabel!)
+        contentView.addSubview(titleLabel!)
         
         titleLabel!.snp.makeConstraints { (make) in
             make.top.equalToSuperview()
@@ -39,16 +57,20 @@ public class StatusBarNotificationBanner: BaseNotificationBanner {
             make.right.equalToSuperview().offset(-5)
             make.bottom.equalToSuperview()
         }
-        
+
         updateMarqueeLabelsDurations()
     }
     
-    public convenience init(title: String, style: BannerStyle = .info, colors: BannerColorsProtocol? = nil) {
+    public convenience init(title: String,
+                            style: BannerStyle = .info,
+                            colors: BannerColorsProtocol? = nil) {
         self.init(style: style, colors: colors)
         titleLabel!.text = title
     }
     
-    public convenience init(attributedTitle: NSAttributedString, style: BannerStyle = .info, colors: BannerColorsProtocol? = nil) {
+    public convenience init(attributedTitle: NSAttributedString,
+                            style: BannerStyle = .info,
+                            colors: BannerColorsProtocol? = nil) {
         self.init(style: style, colors: colors)
         titleLabel!.attributedText = attributedTitle
     }

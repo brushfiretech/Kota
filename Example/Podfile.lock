@@ -1,14 +1,12 @@
 PODS:
   - Alamofire (4.4.0)
-  - Hero (0.3.6)
-  - Kota (0.1.1):
+  - Kota (0.1.6):
     - Alamofire
-    - Hero
-    - NotificationBannerSwift
-  - MarqueeLabel/Swift (3.0.5)
-  - NotificationBannerSwift (1.2.0):
+    - NotificationBannerSwift (~> 1.4.4)
+  - MarqueeLabel/Swift (3.1.3)
+  - NotificationBannerSwift (1.4.5):
     - MarqueeLabel/Swift
-    - SnapKit (~> 3.2.0)
+    - SnapKit (~> 3.2)
   - SnapKit (3.2.0)
 
 DEPENDENCIES:
@@ -16,16 +14,15 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   Kota:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
-  Kota: c2852b7a07bfc84e52ba300dc86e83f02c4164eb
-  MarqueeLabel: 8a25b2cf02cf52165022f01369e63536c58fcc00
-  NotificationBannerSwift: 77f96e1c418309600aad70b21247d9b3cbc360e3
+  Kota: 6a8c66123344a58a807206abeca0a7df680b61ed
+  MarqueeLabel: baa5753dcbd36dca080e1f5c589a665aa5c906f1
+  NotificationBannerSwift: 8e0d142c34406800e5a98d1535fbfca43da49f17
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
 PODFILE CHECKSUM: 3922cd863eb781bd0318592060bda7388872a4b3
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.4.0.beta.1

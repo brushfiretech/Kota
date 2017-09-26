@@ -18,19 +18,38 @@
 
 import UIKit
 
-public protocol BannerColorsProtocol {
-    func color(for style: BannerStyle) -> UIColor
+public enum BannerHaptic {
+    case light
+    case medium
+    case heavy
+    case none
 }
 
-public class BannerColors: BannerColorsProtocol {
+open class BannerHapticGenerator: NSObject {
 
-    public func color(for style: BannerStyle) -> UIColor {
-        switch style {
-            case .danger:   return UIColor(red:0.90, green:0.31, blue:0.26, alpha:1.00)
-            case .info:     return UIColor(red:0.23, green:0.60, blue:0.85, alpha:1.00)
-            case .none:     return UIColor.clear
-            case .success:  return UIColor(red:0.22, green:0.80, blue:0.46, alpha:1.00)
-            case .warning:  return UIColor(red:1.00, green:0.66, blue:0.16, alpha:1.00)
+    /**
+        Generates a haptic based on the given haptic
+        -parameter haptic: The haptic strength to generate when a banner is shown
+     */
+    open class func generate(_ haptic: BannerHaptic) {
+        
+        var style: UIImpactFeedbackStyle!
+        
+        switch haptic {
+        case .light:
+            style = .light
+        case .medium:
+            style = .medium
+        case .heavy:
+            style = .heavy
+        case .none:
+            return
+        }
+        
+        if #available(iOS 10.0, *) {
+            let feedbackGenerator = UIImpactFeedbackGenerator(style: style)
+            feedbackGenerator.prepare()
+            feedbackGenerator.impactOccurred()
         }
     }
 }
