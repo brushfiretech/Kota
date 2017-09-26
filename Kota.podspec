@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Kota'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'A short description of Kota.'
 
 # This description is used to generate tags and improve search results.
@@ -40,5 +40,5 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
     s.dependency 'Hero'
     s.dependency 'Alamofire'
-    s.dependency 'NotificationBannerSwift', ~> 1.4.4'
+    s.dependency 'NotificationBannerSwift', '~> 1.4.4'
 end
