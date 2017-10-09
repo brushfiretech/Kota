@@ -163,7 +163,7 @@ open class KotaController: UIViewController {
         }, completion: nil)
     }
     
-    public func keyboardDidShow(note: NSNotification) {
+    @objc public func keyboardDidShow(note: NSNotification) {
         window.windowLevel = 0
         window.windowLevel = CGFloat.greatestFiniteMagnitude
     }
@@ -186,7 +186,7 @@ open class KotaController: UIViewController {
         KotaData.shared.screenshotImage = image
     }
     
-    public func recordButtonPressed() {
+    @objc public func recordButtonPressed() {
         if recorder.isRecording {
             stopRecordingAndShowPreview()
         } else {
@@ -215,7 +215,7 @@ open class KotaController: UIViewController {
         })
     }
     
-    public func goToScreenShot() {
+    @objc public func goToScreenShot() {
         //        captureScreen()
         
         

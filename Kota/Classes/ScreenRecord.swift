@@ -199,7 +199,7 @@ class ScreenRecorder: NSObject {
         } else {
             outputUrl = tempFileUrl
         }
-        videoWriter = try? AVAssetWriter(outputURL: outputUrl, fileType: AVFileTypeQuickTimeMovie)
+        videoWriter = try? AVAssetWriter(outputURL: outputUrl, fileType: AVFileType.mov)
         assert((videoWriter != nil))
         let pixelNumber = _viewSize.width * _viewSize.height * _scale
         let videoCompression = [AVVideoAverageBitRateKey: pixelNumber * 11.4]
@@ -209,7 +209,7 @@ class ScreenRecorder: NSObject {
             AVVideoHeightKey: _viewSize.height * _scale,
             AVVideoCompressionPropertiesKey: videoCompression
         ]
-        videoWriterInput = AVAssetWriterInput(mediaType: AVMediaTypeVideo,
+        videoWriterInput = AVAssetWriterInput(mediaType: AVMediaType.video,
                                               outputSettings: videoSettings)
         assert((videoWriterInput != nil))
         videoWriterInput?.expectsMediaDataInRealTime = true
@@ -239,7 +239,7 @@ class ScreenRecorder: NSObject {
         return videoTransform
     }
     
-    func writeVideoFrame() {
+    @objc func writeVideoFrame() {
         let result = _frameRenderingSemaphore.wait(timeout: DispatchTime.now())
         if result.hashValue > 0 {
             return

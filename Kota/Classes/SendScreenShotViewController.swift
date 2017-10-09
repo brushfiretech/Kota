@@ -86,7 +86,7 @@ class SendScreenShotViewController: UIViewController, UITextViewDelegate {
 //        })
 //    }
     
-    func sendFeedBack() {
+    @objc func sendFeedBack() {
         if let apiKey = KotaController.setup.apiKey, let authToken = KotaController.setup.authToken, let idList = KotaController.setup.idList {
             let trello = Trello.init(apiKey: apiKey, authToken: authToken)
             if let screenShotImage = self.screenShot.image {
