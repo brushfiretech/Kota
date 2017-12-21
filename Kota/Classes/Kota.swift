@@ -138,10 +138,8 @@ open class KotaController: UIViewController {
     public func toggleView() {
         if kotaHidden {
             showView()
-            kotaHidden = false
         } else {
             hideView()
-            kotaHidden = true
         }
     }
     
@@ -151,7 +149,9 @@ open class KotaController: UIViewController {
                 self.contentView.frame = CGRect(origin: CGPoint(x: self.rightX! - CGFloat(self.viewWidth), y: self.midY!), size: CGSize(width: self.viewWidth, height: self.viewHeight))
                 self.isHidden = false
             }
-        }, completion: nil)
+        }, completion: { (result) in
+            self.kotaHidden = false
+        })
     }
     
     public func hideView() {
@@ -160,7 +160,9 @@ open class KotaController: UIViewController {
                 self.contentView.frame = CGRect(origin: CGPoint(x: self.rightX!, y: self.midY!), size: CGSize(width: self.viewWidth, height: self.viewHeight))
                 self.isHidden = true
             }
-        }, completion: nil)
+        }, completion: { (result) in
+            self.kotaHidden = true
+        })
     }
     
     @objc public func keyboardDidShow(note: NSNotification) {
