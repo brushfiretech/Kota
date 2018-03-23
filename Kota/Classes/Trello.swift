@@ -27,8 +27,13 @@ extension Trello {
             let banner = StatusBarNotificationBanner(title: "Submitting Feedback", style: .info)
             banner.show()
         }
+        
+        var idLabelString = ""
+        if let idLabels = KotaController.setup.idLabels, idLabels.count > 0 {
+            idLabelString = idLabels.joined(separator: ",")
+        }
 
-        if let params: [String: Any] = self.authParameters + ["idList": id, "desc": feedBack, "name": name, "pos": "top"] {
+        if let params: [String: Any] = self.authParameters + ["idList": id, "name": feedBack, "pos": "top", "idLabels": idLabelString] {
             if let header: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded"] {
 //                Alamofire.request(Trello.baseURLString, method: .post, parameters: params, headers: header).responseJSON { response in
 //                    debugPrint(response)
@@ -37,7 +42,7 @@ extension Trello {
 //                        print("JSON: \(json)")
 //                    }
 //                }
-            
+//            idLabels
                 Alamofire.upload(
                     multipartFormData: { MultipartFormData in
                         for (key, value) in params {
@@ -71,7 +76,12 @@ extension Trello {
             banner.show()
         }
         
-        if let params: [String: Any] = self.authParameters + ["idList": id, "desc": feedBack, "name": name, "pos": "top"] {
+        var idLabelString = ""
+        if let idLabels = KotaController.setup.idLabels, idLabels.count > 0 {
+            idLabelString = idLabels.joined(separator: ",")
+        }
+        
+        if let params: [String: Any] = self.authParameters + ["idList": id, "name": feedBack, "pos": "top", "idLabels": idLabelString] {
             if let header: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded"] {
                 //                Alamofire.request(Trello.baseURLString, method: .post, parameters: params, headers: header).responseJSON { response in
                 //                    debugPrint(response)

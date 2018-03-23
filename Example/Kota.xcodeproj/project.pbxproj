@@ -45,7 +45,7 @@
 		93E2FF7506359ECA5D9FC7A4 /* Pods_Kota_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kota_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB0BDC6146D1C5A5D6E9E2E /* Pods-Kota_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kota_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kota_Tests/Pods-Kota_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CED04A40140A56C0B56B0565 /* Pods-Kota_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kota_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kota_Example/Pods-Kota_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E22CD75B4EEF5824F416F0CB /* Kota.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Kota.podspec; path = ../Kota.podspec; sourceTree = "<group>"; };
+		E22CD75B4EEF5824F416F0CB /* Kota.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Kota.podspec; path = ../Kota.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F534F01A296F4CD388D4231C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

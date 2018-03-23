@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.5.1)
-  - Kota (0.1.7):
+  - Kota (0.1.8):
     - Alamofire
     - NotificationBannerSwift
   - MarqueeLabel/Swift (3.1.3)
@@ -18,11 +18,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  Kota: 64ca45521b0695d6a97052db346afc22b7ea4f53
+  Kota: b2de9407d0b085b08e0d75a2b2535d319938df85
   MarqueeLabel: baa5753dcbd36dca080e1f5c589a665aa5c906f1
   NotificationBannerSwift: 666e6c392238561c17a52db4c50e6f00d9942e0d
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
 PODFILE CHECKSUM: 3922cd863eb781bd0318592060bda7388872a4b3
 
-COCOAPODS: 1.4.0.beta.1
+COCOAPODS: 1.4.0

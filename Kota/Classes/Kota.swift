@@ -14,6 +14,7 @@ open class KotaTrelloSetup {
     var apiKey: String?
     var authToken: String?
     var idList: String?
+    var idLabels: [String]?
 }
 
 open class KotaController: UIViewController {
@@ -23,10 +24,11 @@ open class KotaController: UIViewController {
     
     let slackClient = SlackClient.sharedInstance
     
-    open func setupTrello(apiKey: String, authToken: String, idList: String){
+    open func setupTrello(apiKey: String, authToken: String, idList: String, idLabels: [String]?) {
         KotaController.setup.apiKey = apiKey
         KotaController.setup.authToken = authToken
         KotaController.setup.idList = idList
+        KotaController.setup.idLabels = idLabels
     }
     
     var apiKey: String? = {
