@@ -49,7 +49,7 @@ extension Trello {
                             MultipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
                         }
                         
-                        MultipartFormData.append(UIImageJPEGRepresentation(file, 1)!, withName: "fileSource", fileName: "screeshot.png", mimeType: "image/png")
+                        MultipartFormData.append(UIImageJPEGRepresentation(file, 1)!, withName: "fileSource", fileName: "screenshot.png", mimeType: "image/png")
                 }, to: Trello.baseURLString) { (result) in
                     
                     switch result {
